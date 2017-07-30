@@ -1,6 +1,6 @@
 This is a Dockerfile for a task defintion for AWS batch.
 
-The python script simply queues a 1000 messages, and dequeues them to define a task. It also prints out an environment variable, that can be used to make decisions or pull configuration, etc. in real life scenarios.
+The python script simply queues 1000 messages, and dequeues them to define a task. It also prints out an environment variable, that can be used to make decisions or pull configuration, etc. in real world use cases.
 
 Here are the steps to use this repo. Please note that I am using `us-east-1`. **Do not copy paste these steps without knowing what region you want to use.**
 
@@ -64,6 +64,7 @@ botocore.exceptions.NoCredentialsError: Unable to locate credentials
 Do not worry about this error - since the container does not have access to the credentials, it fails. When run via ECS, the ECS role will have access to SQS, so it will run just fine.
 
 5. Create a repo in AWS ECS 
+
  Go to https://console.aws.amazon.com/ecs/home?region=us-east-1#/repositories/create/new and use the name `tenent-queue-processing` and click 'Next Step'
  Keep the next page open, as it will help you push the we just created to ECR. The below steps map to the steps suggested in that page.
  
