@@ -66,7 +66,7 @@ Do not worry about this error - since the container does not have access to the 
 5. Create a repo in AWS ECS 
 
  Go to https://console.aws.amazon.com/ecs/home?region=us-east-1#/repositories/create/new and use the name `tenent-queue-processing` and click 'Next Step'
- Keep the next page open, as it will help you push the we just created to ECR. The below steps map to the steps suggested in that page.
+ Keep the next page open, as it will help you push the docker image we just created to ECR. The below steps map to the steps suggested on that page.
  
 6. Login to AWS ECS Registry
 ```
